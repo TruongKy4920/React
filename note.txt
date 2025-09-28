@@ -1,0 +1,3 @@
+vào 1 folder rỗng và dùng lệnh npm create vite@latest để tạo 1 proj react
+chọn react framework, chọn javascript làm ngôn ngữ viết app
+đặt tên cho folder project
