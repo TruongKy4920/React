@@ -19,12 +19,14 @@ function App(){
         setBooks(updatebooks);
     };
     const EditBook=async(id,new_title)=>{
-        const response =await axios.delete(`http://localhost:3001/books/${id}`,{
+        const response =await axios.put(`http://localhost:3001/books/${id}`,{
             title: new_title
         });
         
             const updatedBooks=books.map((book)=>{
-                if(book.id===id) return {...book,...response.data};
+                if(book.id===id) {
+                    return {...book,...response.data};
+                }
                 return book;
             });
             setBooks(updatedBooks);
