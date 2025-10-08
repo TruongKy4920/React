@@ -1,21 +1,17 @@
-import { use, useState } from "react";
-
-function BookCreate({onCreate}){
-    const [title,setTitle]=useState('');
-    const handleSubmit=(event)=>{
-        event.preventDefault();
-        onCreate(title);
-        setTitle('');
-    };
+import { useState } from "react";
+function BookCreate({onSubmit}){
+    const [title,setTitle]= useState('');
     const handleChange=(event)=>{
         setTitle(event.target.value);
     };
-    return(<div className="book-create">
-                <form onSubmit={handleSubmit}>
-                <input className="input" value={title} onChange={handleChange}></input>
-                <button className="button">Add</button>
-                </form>
-           </div>);
-
+    const handleSubmit=(event)=>{
+        event.preventDefault();
+        onSubmit(title);
+        setTitle('');
+    };
+    return( <form onSubmit={handleSubmit} >
+        <input value={title} onChange={handleChange}></input>
+        <button> </button>
+    </form> );  
 }
-export default BookCreate; 
+export default BookCreate;
