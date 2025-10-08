@@ -15,11 +15,11 @@ function BookShow({book,onEdit,onDel}){
     }
     let content= <div> {book.id} {book.title} </div>;
     if(showEdit) content=<BookEdit onEdit={combineShowEonEdit} book={book}>EDIT</BookEdit>;
-    return( <div>
-        {content}
+    return( <div className="book-show">
+            {content}
         <div className="actions">
-            <button className="delete" onClick={handleDelete}></button>
-            <button className="edit" onClick={handleShow}></button>
+            <button className="delete" onClick={handleDelete}>delete</button>
+            <button className="edit" onClick={handleShow}>edit</button>
         </div>
     </div> );  
 }

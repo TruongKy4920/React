@@ -9,8 +9,8 @@ function BookEdit({book,onEdit}){
         onEdit(book.id,title);
     }
     return( <form onSubmit={handleSubmit} >
-                <input value={title} onChange={handleChange}></input>
-                <button> </button>
+                <input className="input" value={title} onChange={handleChange}></input>
+                <button className="button is_primary">Save </button>
             </form> );  
 }
 export default BookEdit;

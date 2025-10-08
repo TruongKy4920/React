@@ -20,7 +20,7 @@ function App(){
             });
             setBooks(updatebooks);
     }
-    return(<div>
+    return(<div className="app">
             <BookList books={books} onEdit={EditBook} onDel={DeleteBook}></BookList>
             <BookCreate onSubmit={CreateBook}></BookCreate>
             </div>);  

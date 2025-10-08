@@ -5,7 +5,7 @@ function BookList({books,onEdit,onDel}){
         return <BookShow key={book.id} book={book} onEdit={onEdit} onDel={onDel}></BookShow>;
     });
 
-    return (<div>
+    return (<div className="book-list">
                 {re_render}
             </div>);
 }  

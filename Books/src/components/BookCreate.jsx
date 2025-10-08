@@ -9,9 +9,11 @@ function BookCreate({onSubmit}){
         onSubmit(title);
         setTitle('');
     };
-    return( <form onSubmit={handleSubmit} >
-        <input value={title} onChange={handleChange}></input>
-        <button> </button>
-    </form> );  
+    return( <div className="book-create">
+                <form onSubmit={handleSubmit} >
+                    <input className="input" value={title} onChange={handleChange}></input>
+                    <button className="button">Add book </button>
+                </form> 
+            </div>);  
 }
 export default BookCreate;
