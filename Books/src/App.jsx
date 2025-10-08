@@ -14,8 +14,14 @@ function App(){
             });
             setBooks(updatedBooks);
     };
+    const DeleteBook=(id)=>{
+            const updatebooks=books.filter((book)=>{
+                return book.id!==id;
+            });
+            setBooks(updatebooks);
+    }
     return(<div>
-            <BookList books={books} onEdit={EditBook}></BookList>
+            <BookList books={books} onEdit={EditBook} onDel={DeleteBook}></BookList>
             <BookCreate onSubmit={CreateBook}></BookCreate>
             </div>);  
 }
