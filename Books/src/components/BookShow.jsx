@@ -1,20 +1,20 @@
 import BookEdit from "./BookEdit";
-import { useState } from "react";
-function BookShow({book,onEdit,onDel}){  
+import { useState,useContext } from "react";
+import BookContext from "../context/book";
+function BookShow({book}){  
     const [showEdit,setShowEdit]=useState(false);
-    
+    const {onDelete}=useContext(BookContext);
     const handleShow = (event) =>{
         setShowEdit(!showEdit);
     }
-    const combineShowEonEdit=(id,title)=>{
-        onEdit(id,title);
+    const CloseEdit=()=>{
         setShowEdit(false);
     }
     const handleDelete=(event)=>{
-        onDel(book.id);
+        onDelete(book.id);
     }
     let content= <div> {book.id} {book.title} </div>;
-    if(showEdit) content=<BookEdit onEdit={combineShowEonEdit} book={book}>EDIT</BookEdit>;
+    if(showEdit) content=<BookEdit closeEdit={CloseEdit} book={book} >EDIT</BookEdit>;
     return( <div className="book-show">
             {content}
         <div className="actions">
