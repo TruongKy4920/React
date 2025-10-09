@@ -1,6 +1,6 @@
 import BookShow from './BookShow';
 import useBooksContext from '../hooks/use-books-context';
-function BookList(){
+function BookList(){ //da refactor
     const {books}=useBooksContext();
     const re_render= books.map((book)=>{
         return <BookShow key={book.id} book={book} ></BookShow>;
@@ -10,4 +10,4 @@ function BookList(){
                 {re_render}
             </div>);
 }  
-export default BookList;
+export default BookList; 
