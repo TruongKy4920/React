@@ -1,6 +1,6 @@
-import Button from "./components/Button";
+import Button from "../components/Button";
 import {GoBell,GoBook,GoBeaker} from 'react-icons/go';
-function App(){
+function ButtonPage(){
     const handleClick=()=>{
         console.log('click');
     };
@@ -18,4 +18,4 @@ function App(){
         <div><Button warning outline rounded>Click 3</Button></div>
     </div>;
 }
-export default App;
+export default ButtonPage;
