@@ -8,7 +8,8 @@ function Button({children,
     warning,
     danger,
     outline,
-    rounded}){
+    rounded,
+    ...rest}){
     const classes= className('px-3 py-1.5 border',{
         "bg-blue-700 text-white": primary, 
         "bg-black text-white":secondary,
@@ -36,6 +37,6 @@ function Button({children,
         
     })
 );
-    return <button className={classes2}>{children}</button>;
+    return <button {...rest} className={classes2}>{children}</button>;
 }
 export default Button;
