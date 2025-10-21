@@ -1,21 +1,22 @@
-import Button from "./components/Button";
-import {GoBell,GoBook,GoBeaker} from 'react-icons/go';
+import Accordion from "./components/Accordion";
 function App(){
-    const handleClick=()=>{
-        console.log('click');
-    };
+   const arr_accor=[{
+    id: 1,
+    label: "hello",
+    content: "Hi, how are you"
+   },
+   {
+    id: 2,
+    label: "What's up",
+    content: "yooooooo"
+   },
+   {
+    id: 3,
+    label: "Turn down ?",
+    content: "4 wat !!!"
+   }];
     return <div>
-        <div><Button primary outline rounded onClick={handleClick} className='mb-5'> 
-                 <GoBell></GoBell> Click there
-            </Button>
-        </div>
-        <div><Button success outline rounded onClick={handleClick}>
-             <GoBook></GoBook> Click here
-            </Button>
-        </div>
-        <div><Button secondary outline rounded onMouseEnter={handleClick}> <GoBeaker></GoBeaker> Click 1</Button></div>
-        <div><Button danger outline rounded> <GoBook></GoBook> Click 2222</Button></div>
-        <div><Button warning outline rounded>Click 3</Button></div>
+      <Accordion items={arr_accor}></Accordion>
     </div>;
 }
 export default App;
