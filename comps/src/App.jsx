@@ -5,7 +5,7 @@ function App(){
         console.log('click');
     };
     return <div>
-        <div><Button primary outline rounded onClick={handleClick}> 
+        <div><Button primary outline rounded onClick={handleClick} className='mr-5'> 
                  <GoBell></GoBell> Click there
             </Button>
         </div>

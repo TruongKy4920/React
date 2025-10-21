@@ -10,7 +10,7 @@ function Button({children,
     outline,
     rounded,
     ...rest}){
-    const classes= className('px-3 py-1.5 border',{
+    const classes= className(rest.className,'px-3 py-1.5 border',{
         "bg-blue-700 text-white": primary, 
         "bg-black text-white":secondary,
         "bg-green-600 text-white ":success,
